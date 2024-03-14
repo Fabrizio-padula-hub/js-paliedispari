@@ -3,17 +3,36 @@
 
 
 // chiedere all'utente una parola
-const askUser = prompt('Scrivi una parola');
-console.log(askUser)
+const askUser = prompt('Inserisci una parola:');
 
 // verificare la parola
-    // creare un array
-    const listWord = [];
-
-    // inserire le lettere in un array
-for(let i = 0; i < askUser.length; i++){
-    console.log(askUser[i])
-
-}
+const parolaInvertita = wordcontrary(askUser);
 
 // controntare le lettere se la parola letta al contrario è uguale a quella scritta
+
+
+
+
+
+
+// FUNSTIONS
+function wordcontrary(word) {
+    const listWord = [];
+
+    // scorrere le lettere da aggiungere
+    for (let i = 0; i < word.length; i++) {
+        listWord.push(word[i]);
+    }
+
+    // creare una stringa contenente la parola invertita
+    let reversedWord = '';
+    for (let i = listWord.length - 1; i >= 0; i--) {
+        reversedWord += listWord[i];
+    }
+
+    return reversedWord;
+}
+
+
+
+
